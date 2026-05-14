@@ -3,206 +3,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name — Developer</title>
-  <meta name="description" content="Developer. Problem solver. Builder of things that matter.">
+  <title>Your Name</title>
+  <meta name="description" content="Your Name is a software developer who builds things for the web.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav id="nav">
-    <a href="#intro" class="nav-logo">YN.</a>
-    <ul class="nav-links">
-      <li><a href="#about">[about]</a></li>
-      <li><a href="#work">[work]</a></li>
-      <li><a href="#skills">[skills]</a></li>
-      <li><a href="#contact">[contact]</a></li>
-    </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">
-      <span class="icon-sun">☀</span>
-      <span class="icon-moon">☾</span>
-    </button>
-  </nav>
-
-  <main>
-
-    <!-- 01 · INTRO -->
-    <section id="intro" class="section hero">
-      <div class="hero-content fade-in">
-        <p class="hero-eyebrow">Hello, I'm</p>
-        <h1 class="hero-name">Your Name</h1>
-        <p class="hero-tagline">Developer. Problem solver.<br>Builder of things that matter.</p>
-        <div class="hero-cta">
-          <a href="#work" class="btn-primary">View my work</a>
-          <a href="#contact" class="btn-ghost">Get in touch</a>
-        </div>
+  <!-- ─── Navigation ─────────────────────────────────────────────────────────── -->
+  <header id="nav">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">YN.</a>
+      <div class="nav-right">
+        <ol class="nav-links">
+          <li><a href="#about"><span class="nav-num">01.</span> About</a></li>
+          <li><a href="#experience"><span class="nav-num">02.</span> Experience</a></li>
+          <li><a href="#work"><span class="nav-num">03.</span> Work</a></li>
+          <li><a href="#contact"><span class="nav-num">04.</span> Contact</a></li>
+        </ol>
+        <a href="/resume.pdf" class="btn-resume" target="_blank" rel="noopener">Resume</a>
       </div>
-      <div class="scroll-hint" aria-hidden="true">
-        <span>scroll</span>
-        <div class="scroll-line"></div>
-      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ─── Mobile Menu ─────────────────────────────────────────────────────────── -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav>
+      <ol class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">
+          <span class="nav-num">01.</span>About
+        </a></li>
+        <li><a href="#experience" class="mobile-nav-link">
+          <span class="nav-num">02.</span>Experience
+        </a></li>
+        <li><a href="#work" class="mobile-nav-link">
+          <span class="nav-num">03.</span>Work
+        </a></li>
+        <li><a href="#contact" class="mobile-nav-link">
+          <span class="nav-num">04.</span>Contact
+        </a></li>
+      </ol>
+      <a href="/resume.pdf" class="btn-resume" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+
+  <main id="content">
+
+    <!-- ─── Hero ───────────────────────────────────────────────────────────────── -->
+    <section id="hero">
+      <p class="hero-greeting fade-in" style="transition-delay:100ms">Hi, my name is</p>
+      <h1 class="hero-name fade-in" style="transition-delay:200ms">Your Name.</h1>
+      <h2 class="hero-tagline fade-in" style="transition-delay:300ms">I build things for the web.</h2>
+      <p class="hero-desc fade-in" style="transition-delay:400ms">I'm a software developer specialising in building exceptional digital experiences. Currently focused on building accessible, human-centred products at <a href="#" class="inline-link">Company Name</a>.</p>
+      <a href="mailto:hello@yourname.com" class="btn-primary fade-in" style="transition-delay:500ms">Get In Touch</a>
     </section>
 
-    <!-- 02 · ABOUT -->
+    <!-- ─── About ──────────────────────────────────────────────────────────────── -->
     <section id="about" class="section">
-      <div class="section-inner">
-        <h2 class="section-label fade-in"><span class="label-num">01</span>About</h2>
-        <div class="about-grid">
-          <div class="about-text fade-in">
-            <p>I'm a developer based in <em>[City]</em>, focused on building clean, thoughtful software that solves real problems. I care about code quality, user experience, and the details that make the difference between something that works and something that's a pleasure to use.</p>
-            <p>When I'm not writing code, I'm [walking / reading / photographing / something human]. I believe the best work comes from curiosity and craft in equal measure.</p>
-            <a href="/resume.pdf" class="inline-link">Resume ↗</a>
-          </div>
-          <div class="about-photo fade-in">
-            <div class="photo-placeholder">Photo</div>
+      <h2 class="section-heading fade-in">
+        <span class="section-num">01.</span> About Me
+      </h2>
+      <div class="about-inner fade-in" style="transition-delay:100ms">
+        <div class="about-text">
+          <p>Hello! I'm Your Name, a developer based in <em>Your City</em>. I enjoy creating things that live on the internet — websites, applications, and everything in between.</p>
+          <p>My main focus these days is building accessible, inclusive products and digital experiences. I love the challenge of writing code that is both technically sound and a pleasure for people to use.</p>
+          <p>When I'm not at my desk I'm usually [walking / reading / photographing / something human]. I believe the best work comes from curiosity and craft in equal measure.</p>
+          <p>Here are a few technologies I've been working with recently:</p>
+          <ul class="skills-list">
+            <li>JavaScript (ES6+)</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="about-photo">
+          <div class="img-wrapper">
+            <div class="img-placeholder">Photo</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 03 · WORK -->
-    <section id="work" class="section">
-      <div class="section-inner">
-        <h2 class="section-label fade-in"><span class="label-num">02</span>Work</h2>
-        <div class="projects-list">
+    <!-- ─── Experience ─────────────────────────────────────────────────────────── -->
+    <section id="experience" class="section">
+      <h2 class="section-heading fade-in">
+        <span class="section-num">02.</span> Where I've Worked
+      </h2>
+      <div class="experience-inner fade-in" style="transition-delay:100ms">
+        <div class="tab-list" role="tablist" aria-label="Job experience">
+          <button class="tab-btn active" role="tab" data-tab="0" aria-selected="true">Company A</button>
+          <button class="tab-btn" role="tab" data-tab="1" aria-selected="false">Company B</button>
+          <button class="tab-btn" role="tab" data-tab="2" aria-selected="false">Company C</button>
+        </div>
+        <div class="tab-panels">
+          <div class="tab-panel active" role="tabpanel" data-panel="0">
+            <h3 class="job-title">Senior Developer <span class="company-name">@ Company A</span></h3>
+            <p class="date-range">January 2023 – Present</p>
+            <ul>
+              <li>Describe a key achievement or responsibility in one or two sentences, focusing on impact and scope.</li>
+              <li>Another responsibility or accomplishment worth highlighting — the more specific the better.</li>
+              <li>A third bullet covering measurable outcomes or the scale of your contribution.</li>
+            </ul>
+          </div>
+          <div class="tab-panel" role="tabpanel" data-panel="1">
+            <h3 class="job-title">Developer <span class="company-name">@ Company B</span></h3>
+            <p class="date-range">June 2021 – December 2022</p>
+            <ul>
+              <li>Led development of a key product feature used by thousands of users daily.</li>
+              <li>Collaborated with design and product teams to ship new features on schedule.</li>
+              <li>Improved performance of the core data pipeline by optimising queries and caching strategies.</li>
+            </ul>
+          </div>
+          <div class="tab-panel" role="tabpanel" data-panel="2">
+            <h3 class="job-title">Junior Developer <span class="company-name">@ Company C</span></h3>
+            <p class="date-range">September 2019 – May 2021</p>
+            <ul>
+              <li>Worked across the full stack to deliver new features and resolve bugs in a fast-paced environment.</li>
+              <li>Wrote unit and integration tests, maintaining coverage above 80% across the codebase.</li>
+              <li>Participated in code reviews and contributed to internal technical documentation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="project-card fade-in">
-            <div class="project-meta">
-              <span class="project-year">2024</span>
-              <div class="project-links">
-                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
-                <a href="#" target="_blank" rel="noopener">Live ↗</a>
-              </div>
+    <!-- ─── Featured Work ──────────────────────────────────────────────────────── -->
+    <section id="work" class="section">
+      <h2 class="section-heading fade-in">
+        <span class="section-num">03.</span> Some Things I've Built
+      </h2>
+      <ul class="featured-list">
+
+        <li class="featured-item fade-in">
+          <div class="featured-img">
+            <div class="img-placeholder">Project Screenshot</div>
+          </div>
+          <div class="featured-content">
+            <p class="overline">Featured Project</p>
+            <h3 class="featured-title">Project Alpha</h3>
+            <div class="featured-desc">
+              <p>A brief, honest description of what this project does, why it exists, and what problem it solves. Keep it specific — one or two sentences.</p>
             </div>
-            <h3 class="project-name">Project Alpha</h3>
-            <p class="project-desc">A description of what this project does, why it exists, and what problem it solves. Keep it honest and specific — one or two sentences is enough.</p>
-            <ul class="project-tags">
+            <ul class="tech-list">
               <li>React</li>
               <li>TypeScript</li>
               <li>Node.js</li>
-            </ul>
-          </article>
-
-          <article class="project-card fade-in">
-            <div class="project-meta">
-              <span class="project-year">2024</span>
-              <div class="project-links">
-                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
-                <a href="#" target="_blank" rel="noopener">Live ↗</a>
-              </div>
-            </div>
-            <h3 class="project-name">Project Beta</h3>
-            <p class="project-desc">What it does, what you built, what you learned. Quality over quantity — the best portfolios show a small number of things done exceptionally well.</p>
-            <ul class="project-tags">
-              <li>Python</li>
-              <li>FastAPI</li>
               <li>PostgreSQL</li>
             </ul>
-          </article>
-
-          <article class="project-card fade-in">
-            <div class="project-meta">
-              <span class="project-year">2023</span>
-              <div class="project-links">
-                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
-              </div>
+            <div class="featured-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="#" aria-label="External Link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
             </div>
-            <h3 class="project-name">Project Gamma</h3>
-            <p class="project-desc">The impact, the craft, the challenge. What would you tell someone about this project at a dinner party? Start there.</p>
-            <ul class="project-tags">
-              <li>Go</li>
-              <li>Docker</li>
-              <li>AWS</li>
-            </ul>
-          </article>
+          </div>
+        </li>
 
-          <article class="project-card fade-in">
-            <div class="project-meta">
-              <span class="project-year">2023</span>
-              <div class="project-links">
-                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
-                <a href="#" target="_blank" rel="noopener">Live ↗</a>
-              </div>
+        <li class="featured-item featured-item--right fade-in">
+          <div class="featured-img">
+            <div class="img-placeholder">Project Screenshot</div>
+          </div>
+          <div class="featured-content">
+            <p class="overline">Featured Project</p>
+            <h3 class="featured-title">Project Beta</h3>
+            <div class="featured-desc">
+              <p>What it does, what you built, what you learned. Quality over quantity — the best portfolios show a small number of things done exceptionally well.</p>
             </div>
-            <h3 class="project-name">Project Delta</h3>
-            <p class="project-desc">Another project you're proud of. A constraint you worked within, a decision you made, something you'd do differently next time.</p>
-            <ul class="project-tags">
-              <li>Next.js</li>
-              <li>Supabase</li>
-              <li>Vercel</li>
-            </ul>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 04 · SKILLS -->
-    <section id="skills" class="section">
-      <div class="section-inner">
-        <h2 class="section-label fade-in"><span class="label-num">03</span>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-group fade-in">
-            <h3 class="skill-group-title">Languages</h3>
-            <ul>
-              <li>JavaScript / TypeScript</li>
+            <ul class="tech-list">
               <li>Python</li>
-              <li>Go</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-          <div class="skill-group fade-in">
-            <h3 class="skill-group-title">Frontend</h3>
-            <ul>
-              <li>React / Next.js</li>
-              <li>HTML &amp; CSS</li>
-              <li>Tailwind CSS</li>
-              <li>Figma</li>
-            </ul>
-          </div>
-          <div class="skill-group fade-in">
-            <h3 class="skill-group-title">Backend</h3>
-            <ul>
-              <li>Node.js</li>
               <li>FastAPI</li>
-              <li>PostgreSQL</li>
               <li>Redis</li>
-            </ul>
-          </div>
-          <div class="skill-group fade-in">
-            <h3 class="skill-group-title">Tools &amp; Ops</h3>
-            <ul>
-              <li>Git / GitHub</li>
               <li>Docker</li>
-              <li>AWS / GCP</li>
-              <li>Linux</li>
             </ul>
+            <div class="featured-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="#" aria-label="External Link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
+        </li>
+
+        <li class="featured-item fade-in">
+          <div class="featured-img">
+            <div class="img-placeholder">Project Screenshot</div>
+          </div>
+          <div class="featured-content">
+            <p class="overline">Featured Project</p>
+            <h3 class="featured-title">Project Gamma</h3>
+            <div class="featured-desc">
+              <p>The impact, the craft, the challenge. What would you tell someone about this project at a dinner party? Start there and keep it tight.</p>
+            </div>
+            <ul class="tech-list">
+              <li>Go</li>
+              <li>gRPC</li>
+              <li>AWS</li>
+              <li>Terraform</li>
+            </ul>
+            <div class="featured-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
     </section>
 
-    <!-- 05 · CONTACT -->
-    <section id="contact" class="section section--contact">
-      <div class="section-inner contact-inner">
-        <h2 class="section-label fade-in"><span class="label-num">04</span>Contact</h2>
-        <p class="contact-intro fade-in">Currently open to new opportunities. If you have an interesting project or role, I'd love to hear about it.</p>
-        <a href="mailto:hello@yourname.com" class="contact-email fade-in">hello@yourname.com</a>
-        <div class="social-links fade-in">
-          <a href="#" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">Twitter</a>
-        </div>
-      </div>
+    <!-- ─── Other Projects ─────────────────────────────────────────────────────── -->
+    <section id="projects" class="section">
+      <h2 class="projects-heading fade-in">Other Noteworthy Projects</h2>
+      <ul class="projects-grid">
+
+        <li class="project-card fade-in">
+          <div class="card-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="card-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              <a href="#" aria-label="External Link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="card-title">Project Delta</h3>
+          <p class="card-desc">A short description of this project and the problem it solves.</p>
+          <ul class="tech-list"><li>Next.js</li><li>Supabase</li><li>Vercel</li></ul>
+        </li>
+
+        <li class="project-card fade-in" style="transition-delay:100ms">
+          <div class="card-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="card-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            </div>
+          </div>
+          <h3 class="card-title">Project Epsilon</h3>
+          <p class="card-desc">Another short project description. Keep it honest and specific.</p>
+          <ul class="tech-list"><li>Vue.js</li><li>Firebase</li></ul>
+        </li>
+
+        <li class="project-card fade-in" style="transition-delay:200ms">
+          <div class="card-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="card-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              <a href="#" aria-label="External Link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="card-title">Project Zeta</h3>
+          <p class="card-desc">What it is, why you built it, what makes it interesting to you.</p>
+          <ul class="tech-list"><li>Python</li><li>Django</li><li>AWS</li></ul>
+        </li>
+
+        <li class="project-card fade-in">
+          <div class="card-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="card-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            </div>
+          </div>
+          <h3 class="card-title">Project Eta</h3>
+          <p class="card-desc">Short description that captures the essence of what you built.</p>
+          <ul class="tech-list"><li>Rust</li><li>WebAssembly</li></ul>
+        </li>
+
+        <li class="project-card fade-in" style="transition-delay:100ms">
+          <div class="card-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="card-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              <a href="#" aria-label="External Link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="card-title">Project Theta</h3>
+          <p class="card-desc">Another project worth showing. Focus on impact and craft over quantity.</p>
+          <ul class="tech-list"><li>Swift</li><li>CoreML</li></ul>
+        </li>
+
+        <li class="project-card fade-in" style="transition-delay:200ms">
+          <div class="card-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="card-links">
+              <a href="#" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            </div>
+          </div>
+          <h3 class="card-title">Project Iota</h3>
+          <p class="card-desc">The last card. Keep descriptions tight — two sentences maximum.</p>
+          <ul class="tech-list"><li>Kotlin</li><li>Spring Boot</li></ul>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ─── Contact ─────────────────────────────────────────────────────────────── -->
+    <section id="contact" class="section contact-section">
+      <p class="contact-overline fade-in">04. What's Next?</p>
+      <h2 class="contact-heading fade-in" style="transition-delay:100ms">Get In Touch</h2>
+      <p class="contact-body fade-in" style="transition-delay:200ms">I'm currently open to new opportunities. Whether you have a question, a project in mind, or just want to say hello — my inbox is always open.</p>
+      <a href="mailto:hello@yourname.com" class="btn-primary fade-in" style="transition-delay:300ms">Say Hello</a>
     </section>
 
   </main>
 
   <footer>
-    <p>Designed &amp; built by Your Name &mdash; 2024</p>
+    <p>Designed &amp; built by Your Name &mdash; 2025</p>
   </footer>
+
+  <!-- ─── Fixed Side Panels ──────────────────────────────────────────────────── -->
+  <aside class="side side--left" aria-label="Social links">
+    <ul class="social-icons">
+      <li>
+        <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/" aria-label="Twitter / X" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://codepen.io/" aria-label="CodePen" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/><polyline points="2 15.5 12 8.5 22 15.5"/><line x1="12" y1="2" x2="12" y2="8.5"/></svg>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <aside class="side side--right" aria-label="Email">
+    <a href="mailto:hello@yourname.com" class="side-email">hello@yourname.com</a>
+  </aside>
 
   <script src="script.js"></script>
 </body>
