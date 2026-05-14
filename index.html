@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Developer</title>
+  <meta name="description" content="Developer. Problem solver. Builder of things that matter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="#intro" class="nav-logo">YN.</a>
+    <ul class="nav-links">
+      <li><a href="#about">[about]</a></li>
+      <li><a href="#work">[work]</a></li>
+      <li><a href="#skills">[skills]</a></li>
+      <li><a href="#contact">[contact]</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">
+      <span class="icon-sun">☀</span>
+      <span class="icon-moon">☾</span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- 01 · INTRO -->
+    <section id="intro" class="section hero">
+      <div class="hero-content fade-in">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">Your Name</h1>
+        <p class="hero-tagline">Developer. Problem solver.<br>Builder of things that matter.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn-primary">View my work</a>
+          <a href="#contact" class="btn-ghost">Get in touch</a>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- 02 · ABOUT -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <h2 class="section-label fade-in"><span class="label-num">01</span>About</h2>
+        <div class="about-grid">
+          <div class="about-text fade-in">
+            <p>I'm a developer based in <em>[City]</em>, focused on building clean, thoughtful software that solves real problems. I care about code quality, user experience, and the details that make the difference between something that works and something that's a pleasure to use.</p>
+            <p>When I'm not writing code, I'm [walking / reading / photographing / something human]. I believe the best work comes from curiosity and craft in equal measure.</p>
+            <a href="/resume.pdf" class="inline-link">Resume ↗</a>
+          </div>
+          <div class="about-photo fade-in">
+            <div class="photo-placeholder">Photo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · WORK -->
+    <section id="work" class="section">
+      <div class="section-inner">
+        <h2 class="section-label fade-in"><span class="label-num">02</span>Work</h2>
+        <div class="projects-list">
+
+          <article class="project-card fade-in">
+            <div class="project-meta">
+              <span class="project-year">2024</span>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="#" target="_blank" rel="noopener">Live ↗</a>
+              </div>
+            </div>
+            <h3 class="project-name">Project Alpha</h3>
+            <p class="project-desc">A description of what this project does, why it exists, and what problem it solves. Keep it honest and specific — one or two sentences is enough.</p>
+            <ul class="project-tags">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Node.js</li>
+            </ul>
+          </article>
+
+          <article class="project-card fade-in">
+            <div class="project-meta">
+              <span class="project-year">2024</span>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="#" target="_blank" rel="noopener">Live ↗</a>
+              </div>
+            </div>
+            <h3 class="project-name">Project Beta</h3>
+            <p class="project-desc">What it does, what you built, what you learned. Quality over quantity — the best portfolios show a small number of things done exceptionally well.</p>
+            <ul class="project-tags">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </article>
+
+          <article class="project-card fade-in">
+            <div class="project-meta">
+              <span class="project-year">2023</span>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+            <h3 class="project-name">Project Gamma</h3>
+            <p class="project-desc">The impact, the craft, the challenge. What would you tell someone about this project at a dinner party? Start there.</p>
+            <ul class="project-tags">
+              <li>Go</li>
+              <li>Docker</li>
+              <li>AWS</li>
+            </ul>
+          </article>
+
+          <article class="project-card fade-in">
+            <div class="project-meta">
+              <span class="project-year">2023</span>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="#" target="_blank" rel="noopener">Live ↗</a>
+              </div>
+            </div>
+            <h3 class="project-name">Project Delta</h3>
+            <p class="project-desc">Another project you're proud of. A constraint you worked within, a decision you made, something you'd do differently next time.</p>
+            <ul class="project-tags">
+              <li>Next.js</li>
+              <li>Supabase</li>
+              <li>Vercel</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-inner">
+        <h2 class="section-label fade-in"><span class="label-num">03</span>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group fade-in">
+            <h3 class="skill-group-title">Languages</h3>
+            <ul>
+              <li>JavaScript / TypeScript</li>
+              <li>Python</li>
+              <li>Go</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group fade-in">
+            <h3 class="skill-group-title">Frontend</h3>
+            <ul>
+              <li>React / Next.js</li>
+              <li>HTML &amp; CSS</li>
+              <li>Tailwind CSS</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="skill-group fade-in">
+            <h3 class="skill-group-title">Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>FastAPI</li>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+            </ul>
+          </div>
+          <div class="skill-group fade-in">
+            <h3 class="skill-group-title">Tools &amp; Ops</h3>
+            <ul>
+              <li>Git / GitHub</li>
+              <li>Docker</li>
+              <li>AWS / GCP</li>
+              <li>Linux</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · CONTACT -->
+    <section id="contact" class="section section--contact">
+      <div class="section-inner contact-inner">
+        <h2 class="section-label fade-in"><span class="label-num">04</span>Contact</h2>
+        <p class="contact-intro fade-in">Currently open to new opportunities. If you have an interesting project or role, I'd love to hear about it.</p>
+        <a href="mailto:hello@yourname.com" class="contact-email fade-in">hello@yourname.com</a>
+        <div class="social-links fade-in">
+          <a href="#" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed &amp; built by Your Name &mdash; 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
