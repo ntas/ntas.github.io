@@ -1,3 +1,14 @@
+(function () {
+  document.documentElement.classList.add('no-transition');
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved ?? (prefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+  requestAnimationFrame(() => {
+    document.documentElement.classList.remove('no-transition');
+  });
+}());
+
 // ─── Nav: hide on scroll-down, reappear on scroll-up ──────────────────────────
 const nav = document.getElementById('nav');
 let lastScrollY = window.scrollY;
@@ -73,6 +84,15 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 // Close menu on Escape
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+});
+
+// ─── Theme toggle ─────────────────────────────────────────────────────────────
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  const next = isLight ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
 });
 
 // ─── Experience tabs ──────────────────────────────────────────────────────────

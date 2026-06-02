@@ -32,6 +32,19 @@
   --transition:      all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+html[data-theme="light"] {
+  --dark-navy:     #d9d2c8;
+  --navy:          #f5efe6;
+  --light-navy:    #ede7dd;
+  --lightest-navy: #d9d2c8;
+  --navy-shadow:   rgba(0, 0, 0, 0.1);
+  --slate:         #8a8070;
+  --light-slate:   #5a5248;
+  --lightest-slate:#1a1a1a;
+  --white:         #0d0d0d;
+  --accent-dim:    rgba(249, 115, 22, 0.12);
+}
+
 /* ─── Base ───────────────────────────────────────────────────────────────────── */
 
 html {
@@ -47,6 +60,19 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+body,
+#nav,
+.project-card,
+.img-placeholder,
+.skill-group li,
+footer {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.no-transition * {
+  transition: none !important;
 }
 
 body.blur > *:not(#nav):not(.mobile-menu) {
@@ -92,6 +118,10 @@ img {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 10px 30px -10px var(--navy-shadow);
+}
+
+html[data-theme="light"] #nav.scrolled {
+  background: rgba(245, 239, 230, 0.92);
 }
 
 #nav.hidden {
@@ -164,6 +194,26 @@ img {
   background: var(--accent-dim);
   opacity: 1;
 }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--slate);
+  font-size: 1rem;
+  padding: 0.25rem 0.375rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.theme-toggle:hover { color: var(--accent); }
+
+.icon-moon { display: none; }
+
+html[data-theme="light"] .icon-sun  { display: none; }
+html[data-theme="light"] .icon-moon { display: inline; }
 
 /* ─── Hamburger ──────────────────────────────────────────────────────────────── */
 
